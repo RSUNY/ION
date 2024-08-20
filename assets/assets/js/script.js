@@ -1,27 +1,106 @@
-document.getElementById("background1").addEventListener("click", updateGame);
-document.getElementById('dmgDone2').innerHTML = "77"
+document.getElementById("background1").addEventListener("click", rungame);
+document.getElementById('background2').addEventListener("click" , rungame)innerHTML = "77";
+document.getElementById("swapButton1").addEventListener("click", runHealth);
+document.getElementById("sawpButton2").addEventListener("click", runHealth2);
 
-const wolverine = document.getElementsByClassName(demo)
-const typeMessage = document.getElementsByClassName(right)
-const nextMessage = document.getElementsByClassName(left)
-const clickedMessage = document.getElementById(background1)
-const nextClickedMessage = document.getElementById(backgound2)
-const swapButton = document.getElementById('swapButton1');
+
+elselement.classlist.add()
+// const wolverine = document.getElementsByClassName(demo)
+// const typeMessage = document.getElementsByClassName(right)
+// const nextMessage = document.getElementsByClassName(left)
+// const clickedMessage = document.getElementById(background1)
+// const nextClickedMessage = document.getElementById(backgound2)
+const swapButton1 = document.getElementById('swapButton1');
 const healthSpan = document.getElementById('health1');
-const swapButton = document.getElementById('swapButton2');
-const healthSpan = document.getElementById('health2');
+const swapButton2 = document.getElementById('swapButton2');
+const healthSpan2 = document.getElementById('health2');
+const dmgDone1 = document.getElementById(`dmgDone1`)
+const dmgDone2 = document.getElementById(`dmgDone2`)
+const rungame[""]
 
 
-
-const rungame = {"1" , "2" , "3" , "4" , "5"};
+const rungame = ["1" , "2" , "3" , "4" , "5"];
 rungame.forEach(("")) => {
-    console.log(element);
+    // Define an object to map indices to actions
+const elementActions = {
+    "1": "deals damage",
+    "2": "activates special ability",
+    "3": "heals player",
+    "4": "0",
+    "5": "0",
+};
 
+rungame.forEach((element) => {
+    const action = elementActions[element];
+    if (action) {
+        // Perform additional logic based on the action
+        switch (element) {
+            case "1":
+                // Deal damage
+                console.log(`Dealing ${gameData.dmgDone1} damage.`);
+                break;
+            case "2":
+                // Activate special ability
+                console.log("Special ability activated!");
+                break;
+            case "3":
+                // Heal player
+                console.log(`Healing ${gameData.dmgDone} health.`);
+                break;
+            case "4":
+                // Buff defense
+                console.log("Defense buff applied.");
+                break;
+            case "5":
+                // Trigger event
+                console.log("Event triggered!");
+                break;
+            default:
+                console.log(`Element ${element} has no defined action.`);
+        }
+    } else {
+        console.log(`Element ${element} has no defined action.`);
+    }
+  
 });
 
     console.log("The updateGame function has been called!");
     // Your game update logic goes here
-}
+}// function readScore() {
+    
+//     let player1Health = 1000;
+//     let player2Health = 1000;
+
+//     function updateGame(dmgDisplayId) {
+//         // Swap damage: decrease health by a random amount (for demonstration purposes)
+//         const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+
+//         if (dmgDisplayId === 'dmgDone1') {
+//             player1Health -= damage;
+//             document.getElementById('health1').textContent = player1Health;
+//             document.getElementById('dmgDone1').textContent = `${damage} dmg`;
+//         } else {
+//             player2Health -= damage;
+//             document.getElementById('health2').textContent = player2Health;
+//             document.getElementById('dmgDone2').textContent = `${damage} dmg`;
+//         }
+
+//         // Check if players are defeated (health reaches 0)
+//         if (player1Health <= 0 || player2Health <= 0) {
+//             alert('Game over! One of the players lost.');
+//             // Add any other game-over logic here
+//         }
+//     }
+//     let rndInt = createGame(1 , 1000)
+//     rndInt.forEach(constrndInt => {
+//         updateGame().toggle = ? 1, 0
+//         p.demo.createLeft = toggleEnlarge()
+    
+//     else if rndInt= createGame)500  , 1000)
+//     rndInt.forEach(constrndInt => {
+//         updateGame().toggle = ? 1, 0
+//         p.demo.createLeft = toggleShrink());
+//     return console.log(rndInt)
 // the text will appear if the image enlarges or shrinks 
 // changed the text html displayed of click me as dmg is displayed
 
@@ -32,31 +111,31 @@ rungame.forEach(("")) => {
 // );
 const rungame[""]
 
-// var gameData = {
-//     dmg: 20,
-    // dmgPerClick: 1000 / gameData.dmg
-    // dmgDone1: 50,
-    // dmgDone: 20,
-// };
+var gameData = [
+    dmg: 20,
+    dmgPerClick: 1000 / gameData.dmg
+    dmgDone1: 50,
+    dmgDone: 20,
+];
 
-// var mainGameLoop = window.setInterval(function() {
-//     updateGame()
-// }, 1000)
-// function updateGame() {
-//     gameData.dmgPerClick -= gameData.dmg
-//     document.getElementById("dmgDone").innerHTML = gameData.dmgPerClick + "dmg"
-//     document.getElementById("dmgDone1").innerHTML = gameData.dmgPerClick + "dmg"
+var mainGameLoop = window.setInterval(function() {
+    updateGame()
+}, 1000)
+function updateGame() {
+    gameData.dmgPerClick -= gameData.dmg
+    document.getElementById("dmgDone").innerHTML = gameData.dmgPerClick + "dmg"
+    document.getElementById("dmgDone1").innerHTML = gameData.dmgPerClick + "dmg"
     
-// }
+}
 
 
-// const identifiers = {
+// const identifiers = [
 //     4: 'dmg',
 //     2: 'swap',
 //     3: 'special',
 //     5: 'some_other_value',
 //     1: 'another_value'
-// };
+// ];
 
 // Access values using the IDs
 // console.log(identifiers[4]); // 'dmg'
@@ -83,47 +162,64 @@ const rungame[""]
 // }
 
 
-// const createGame = ["dmg", "special", "swap"]; // Define your array
-// const shuffledCreateGame = shuffleArray(createGame);
-// console.log(shuffledCreateGame);
+const createGame = ["deals damage" , "activates special ability", "heals player"]; // Define your array
+const shuffledCreateGame = shuffleArray(createGame);
+console.log(shuffledCreateGame);
     
-// function shuffleArray(array) {
-//     let currentIndex = array.length;
-//     while (currentIndex > 0) {
-//         const randomIndex = Math.floor(Math.random() * currentIndex);
-//         currentIndex--;
+function shuffleArray(array) {
+    let currentIndex = array.length;
+    while (currentIndex > 0) {
+        const randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
 
-//         // Swap elements at currentIndex and randomIndex
-//         [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-//     }
-//     return array;
-// }
+        // Swap elements at currentIndex and randomIndex
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+    return array;
+}
 
-// const myArray = [1, 2, 3, 4, 5];
-// const shuffledArray = shuffleArray(myArray);
-// console.log(shuffledArray);
+const myArray = [1, 2, 3, 4, 5];
+const shuffledArray = shuffleArray(myArray);
+console.log(shuffledArray);
     
 // let playerHealth = 100;
 
 // // Get the button and health span elements
-const swapButton = document.getElementById('swapButton1');
-const healthSpan = document.getElementById('health1');
+function runHealth(swapButton1) {
+// Event listener for the button
+swapButton1.addEventListener('click', () => {
+    // Swap damage: decrease health by a random amount (for demonstration purposes)
+    const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+    Deadpool health -= damage;
 
-// // Event listener for the button
-// swapButton.addEventListener('click', () => {
-//     // Swap damage: decrease health by a random amount (for demonstration purposes)
-//     const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
-//     playerHealth -= damage;
+    // Update the health display
+    healthSpan.textContent = Deadpool health;
 
-//     // Update the health display
-//     healthSpan.textContent = playerHealth;
+    // Check if player is defeated (health reaches 0)
+    if (Deadpool health <= 0) {
+        alert('Game over! You lost.');
+        // Add any other game-over logic here
+    }
+});
+}
 
-//     // Check if player is defeated (health reaches 0)
-//     if (playerHealth <= 0) {
-//         alert('Game over! You lost.');
-//         // Add any other game-over logic here
-// //     }
-// });
+function runHealth2(swapButton2) {
+swapButton2.addEventListener('click', () => {
+    // Swap damage: decrease health by a random amount (for demonstration purposes)
+    const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+    Wolverine health -= damage;
+
+    // Update the health display
+    healthSpan.textContent = Wolverine health;
+
+    // Check if player is defeated (health reaches 0)
+    if (Wolverine health <= 0) {
+        alert('Game over! You lost.');
+        // Add any other game-over logic here
+    }
+});
+}
+
 
 // function readScore() {
     
