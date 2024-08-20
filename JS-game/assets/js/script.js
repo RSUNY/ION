@@ -1,3 +1,5 @@
+document.getElementById("background1").addEventListener("click", updateGame);
+
 const wolverine = document.getElementsByClassName(demo)
 const typeMessage = document.getElementsByClassName(right)
 const nextMessage = document.getElementsByClassName(left)
@@ -9,12 +11,15 @@ function  while (condition) {
 }
 
 
-function updateGame() {}
+function updateGame() {
+    console.log("The updateGame function has been called!");
+    // Your game update logic goes here
+}
 // the text will appear if the image enlarges or shrinks 
 // changed the text html displayed of click me as dmg is displayed
 
 
-function (element,forEach(img => {}
+function runGame(element,forEach(img => {}
     imgResponsive = left.value
     imgEnlarge = func(getElementsByClassName). $``;
 );
