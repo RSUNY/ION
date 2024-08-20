@@ -47,6 +47,7 @@ h3 {
     z-index: 0;
     white-space: inherit;
     font-size: larger;
+    border-style: groove;
 }
 
 #background2 {
@@ -63,6 +64,7 @@ p {
     font-weight: inherit;
     font-family: inherit;
     background-color: brown;
+    
 }
 
  button {
@@ -121,3 +123,12 @@ img {
     border-radius: 100px;
     
 }
+
+hr {
+    border: none;
+  }
+  hr::before {
+    content: '***';
+    display: block;
+    text-align: center;
+  }

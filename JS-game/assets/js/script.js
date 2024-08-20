@@ -23,6 +23,10 @@ var gameData = {
     dmgPerClick: 5
 }
 
+function updateGame() {
+    gameData.dmg +- gameData.goldPerClick
+}
+
 }
 
 function createGame(min , max) {
