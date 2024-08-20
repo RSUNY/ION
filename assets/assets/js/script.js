@@ -16,11 +16,11 @@ const swapButton2 = document.getElementById('swapButton2');
 const healthSpan2 = document.getElementById('health2');
 const dmgDone1 = document.getElementById(`dmgDone1`)
 const dmgDone2 = document.getElementById(`dmgDone2`)
-const rungame[""]
+// const rungame[""]
 
 
 const rungame = ["1" , "2" , "3" , "4" , "5"];
-rungame.forEach(("")) => {
+
     // Define an object to map indices to actions
 const elementActions = {
     "1": "deals damage",
@@ -78,7 +78,7 @@ rungame.forEach((element) => {
         const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
         if (dmgDisplayId === 'dmgDone1') {
-            player1Health -= damage;
+            Wolverine health -= damage;
             document.getElementById('health1').textContent = Wolverine health;
             document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;
         } else {
