@@ -24,7 +24,8 @@ var gameData = {
 }
 
 function updateGame() {
-    gameData.dmg +- gameData.goldPerClick
+    gameData.dmg -= gameData.dmgPerClick
+    document.getElementById("dmgDone").innerHTML = gameData.dmg + "dmg"
 }
 
 }
