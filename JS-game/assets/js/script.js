@@ -1,7 +1,8 @@
 const wolverine = document.getElementsByClassName(demo)
 const typeMessage = document.getElementsByClassName(right)
 const nextMessage = document.getElementsByClassName(left)
-const
+const clickedMessage = document.getElementById(background1)
+const nextClickedMessage = document.getElementById(backgound2)
 
 function  while (condition) {
     
@@ -9,6 +10,8 @@ function  while (condition) {
 
 
 function updateGame() {}
+// the text will appear if the image enlarges or shrinks 
+
 
 function (element,forEach(img => {}
     imgResponsive = left.value
