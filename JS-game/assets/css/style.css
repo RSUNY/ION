@@ -22,3 +22,65 @@ body {
     display: flex;
     margin: 0;
 }
+
+h1 {
+    background-color: antiquewhite;
+    outline-color: aqua;
+    overflow-inline: inherit;
+}
+
+h2 {
+    color: cyan;
+    background-color: brown;
+}
+
+h3 {
+    color: antiquewhite;
+    font-family: "New Amsterdam";
+}
+
+#background1 {
+    color: #d9ff00;
+    top: 0%;
+    z-index: 0;
+    white-space: inherit;
+    font-size: larger;
+}
+
+#background2 {
+    color: red;
+    top: 0%;
+    z-index: 0;
+    white-space: inherit;
+    font-size: larger;
+}
+
+p {
+    color: rgb(230, 173, 173);
+    font-size: larger;
+    font-weight: inherit;
+    font-family: inherit;
+    background-color: brown;
+}
+
+ button {
+    
+    /* position:absolute; */
+	/* background-size: 6rem;
+    margin-top: 0 20px;
+    display: flex; */
+    justify-content: end; */
+    scroll-margin-left: auto; */
+ }
+ 
+
+button::shadow {
+    top: 0%;
+    z-index: 0;
+    white-space: inherit;
+    color: aqua;
+} 
+
+* {
+    background-color: color-mix(in xyz, #c4e438 20%, #cdcdcd 60%);
+}
