@@ -70,8 +70,8 @@ rungame.forEach((element) => {
     // Your game update logic goes here
 // function readScore() {
     
-    let player1Health = 1000;
-    let player2Health = 1000;
+    let Wolverine health = 1000;
+    let Deadpool health = 1000;
 
     function updateGame(dmgDisplayId) {
         // Swap damage: decrease health by a random amount (for demonstration purposes)
@@ -112,7 +112,7 @@ rungame.forEach((element) => {
 //     imgResponsive = left.value
 //     imgEnlarge = func(getElementsByClassName). $``;
 // );
-const rungame[""]
+// const rungame[""]
 
 var gameData = [
     dmg: 20,
