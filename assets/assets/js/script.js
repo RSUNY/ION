@@ -123,8 +123,8 @@ var mainGameLoop = window.setInterval(function() {
 }, 1000)
 function updateGame() {
     gameData.dmgPerClick -= gameData.dmg
-    document.getElementById("dmgDone").innerHTML = gameData.dmgPerClick + "dmg"
     document.getElementById("dmgDone1").innerHTML = gameData.dmgPerClick + "dmg"
+    document.getElementById("dmgDone2").innerHTML = gameData.dmgPerClick + "dmg"
     
 }
 
