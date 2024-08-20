@@ -1,15 +1,24 @@
 document.getElementById("background1").addEventListener("click", updateGame);
+document.getElementById('dmgDone2').innerHTML = "77"
 
 const wolverine = document.getElementsByClassName(demo)
 const typeMessage = document.getElementsByClassName(right)
 const nextMessage = document.getElementsByClassName(left)
 const clickedMessage = document.getElementById(background1)
 const nextClickedMessage = document.getElementById(backgound2)
+const swapButton = document.getElementById('swapButton1');
+const healthSpan = document.getElementById('health1');
+const swapButton = document.getElementById('swapButton2');
+const healthSpan = document.getElementById('health2');
 
 
 
+const rungame = {"1" , "2" , "3" , "4" , "5"};
+rungame.forEach(("")) => {
+    console.log(element);
 
-function updateGame() {
+});
+
     console.log("The updateGame function has been called!");
     // Your game update logic goes here
 }
@@ -21,6 +30,7 @@ function updateGame() {
 //     imgResponsive = left.value
 //     imgEnlarge = func(getElementsByClassName). $``;
 // );
+const rungame[""]
 
 // var gameData = {
 //     dmg: 20,
@@ -96,8 +106,8 @@ function updateGame() {
 // let playerHealth = 100;
 
 // // Get the button and health span elements
-// const swapButton = document.getElementById('swapButton');
-// const healthSpan = document.getElementById('health');
+const swapButton = document.getElementById('swapButton1');
+const healthSpan = document.getElementById('health1');
 
 // // Event listener for the button
 // swapButton.addEventListener('click', () => {
