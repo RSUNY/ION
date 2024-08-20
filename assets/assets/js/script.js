@@ -66,25 +66,27 @@ rungame.forEach((element) => {
 });
 
     console.log("The updateGame function has been called!");
+    console.log(updateGame())
     // Your game update logic goes here
-}// function readScore() {
+// function readScore() {
     
 //     let player1Health = 1000;
 //     let player2Health = 1000;
 
-//     function updateGame(dmgDisplayId) {
-//         // Swap damage: decrease health by a random amount (for demonstration purposes)
-//         const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+    function updateGame(dmgDisplayId) {
+        // Swap damage: decrease health by a random amount (for demonstration purposes)
+        const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
-//         if (dmgDisplayId === 'dmgDone1') {
-//             player1Health -= damage;
-//             document.getElementById('health1').textContent = player1Health;
-//             document.getElementById('dmgDone1').textContent = `${damage} dmg`;
-//         } else {
-//             player2Health -= damage;
-//             document.getElementById('health2').textContent = player2Health;
-//             document.getElementById('dmgDone2').textContent = `${damage} dmg`;
-//         }
+        if (dmgDisplayId === 'dmgDone1') {
+            player1Health -= damage;
+            document.getElementById('health1').textContent = Wolverine health;
+            document.getElementById('dmgDone1').textContent = `${damage} dmg`;
+        } else {
+            Deadpool health -= damage;
+            document.getElementById('health2').textContent = Deadpool health;
+            document.getElementById('dmgDone2').textContent = `${damage} dmg`;      
+        }
+    }
 
 //         // Check if players are defeated (health reaches 0)
 //         if (player1Health <= 0 || player2Health <= 0) {
