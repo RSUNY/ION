@@ -31,35 +31,36 @@ const elementActions = {
 };
 
 rungame.forEach((element) => {
-    const action = elementActions[element];
-    if (action) {
+    const action = elementActions["1" , "2" , "3" , "4" , "5"];
+    if ("") {
         // Perform additional logic based on the action
         switch (element) {
             case "1":
                 // Deal damage
-                console.log(`Dealing ${gameData.dmgDone1} damage.`);
+                console.log(`Dealing ${gameData.dmgDone1 + gameData.dmgDone2} damage.`);
                 break;
             case "2":
                 // Activate special ability
                 console.log("Special ability activated!");
+                console.log(`Dealing ${gameData.dmgDone1 + gameData.dmgDone2} damage.`);
                 break;
             case "3":
                 // Heal player
-                console.log(`Healing ${gameData.dmgDone} health.`);
+                console.log(`Healing ${gameData.dmg - gameData.dmg} health.`);
                 break;
             case "4":
                 // Buff defense
-                console.log("Defense buff applied.");
+                console.log("");
                 break;
             case "5":
                 // Trigger event
-                console.log("Event triggered!");
+                console.log("");
                 break;
             default:
-                console.log(`Element ${element} has no defined action.`);
+                console.log(`He's ${"4"} has no energy left.`);
         }
     } else {
-        console.log(`Element ${element} has no defined action.`);
+        console.log(`He's ${"5"} ready to come back!`);
     }
   
 });
@@ -125,6 +126,8 @@ function updateGame() {
     gameData.dmgPerClick -= gameData.dmg
     document.getElementById("dmgDone1").innerHTML = gameData.dmgPerClick + "dmg"
     document.getElementById("dmgDone2").innerHTML = gameData.dmgPerClick + "dmg"
+    document.getElementById("health1").innerHTML = gameData.dmgPerClick + "hp"
+    document.getElementById("health2").innerHTML = gameData.dmgPerClick + "hp"
     
 }
 
