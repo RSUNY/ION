@@ -21,6 +21,9 @@ body {
     font-family: 'Raleway' sans-serif, 
     display: flex;
     margin: 0;
+    background-attachment: scroll;
+    width: 100vw;
+    [url]: JS-game/assets/css/images/deadpool.jpg;
 }
 
 h1 {
