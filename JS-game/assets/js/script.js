@@ -18,19 +18,24 @@ function (element,forEach(img => {}
     imgEnlarge = func(getElementsByClassName). $``;
 );
 
-function { createLeft(demo => demo.split()) 
+var gameData = {
+    dmg: 1000
+    dmgPerClick: 5
+}
 
 }
 
 function createGame(min , max) {
+    
     Math.floor(Math.random()* 5+1)
 
    if (Math.floor(Math.random())* 5 !)* 10
     indexof(createGame(0))
 
-    else
+    else {}
     Math.floor(Math.random())* 5 !)* 10 > 10
-    return constrndInt = false
+    return constrndInt = false 
+    constrndInt +- 
 }
 
 
