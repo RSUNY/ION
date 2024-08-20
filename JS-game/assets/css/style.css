@@ -42,20 +42,22 @@ h3 {
 }
 
 #background1 {
-    color: #d9ff00;
+    color: rgb(51, 51, 51);
     top: 0%;
     z-index: 0;
     white-space: inherit;
     font-size: larger;
     border-style: groove;
+    font-family: Oxygen , sans-serif;
 }
 
 #background2 {
-    color: red;
+    color: rgba(148, 0, 69, 0.932);
     top: 0%;
     z-index: 0;
     white-space: inherit;
     font-size: larger;
+    font-family: Oxygen , sans-serif;
 }
 
 p {
@@ -89,10 +91,13 @@ button::shadow {
     background-color: color-mix(in xyz, #c4e438 20%, #cdcdcd 60%);
 }
 
-img {
-    background-position: 60%;
-    position: fixed;
-}
+/* img {
+    background-position: 0%;
+    position: relative;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    } */
 
 .left {
     display: flexbox;
@@ -121,6 +126,13 @@ img {
     background-repeat: no-repeat;
     border-style: outset;
     border-radius: 100px;
+    
+    background-position: 0%;
+    position: relative;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    
     
 }
 
