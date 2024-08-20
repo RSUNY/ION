@@ -1,7 +1,7 @@
-document.getElementById("background1").addEventListener("click", rungame);
-document.getElementById('background2').addEventListener("click" , rungame)innerHTML = "77";
-document.getElementById("swapButton1").addEventListener("click", runHealth);
-document.getElementById("sawpButton2").addEventListener("click", runHealth2);
+document.getElementById("background1").addEventListener("click", rungame());
+document.getElementById('background2').addEventListener("click" , rungame().innerHTML= "77");innerHTML= "77";
+document.getElementById("swapButton1").addEventListener("click", runHealth());
+document.getElementById("sawpButton2").addEventListener("click", runHealth2());
 
 
 elselement.classlist.add()
@@ -70,8 +70,8 @@ rungame.forEach((element) => {
     // Your game update logic goes here
 // function readScore() {
     
-//     let player1Health = 1000;
-//     let player2Health = 1000;
+    let player1Health = 1000;
+    let player2Health = 1000;
 
     function updateGame(dmgDisplayId) {
         // Swap damage: decrease health by a random amount (for demonstration purposes)
@@ -80,17 +80,17 @@ rungame.forEach((element) => {
         if (dmgDisplayId === 'dmgDone1') {
             player1Health -= damage;
             document.getElementById('health1').textContent = Wolverine health;
-            document.getElementById('dmgDone1').textContent = `${damage} dmg`;
+            document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;
         } else {
             Deadpool health -= damage;
             document.getElementById('health2').textContent = Deadpool health;
-            document.getElementById('dmgDone2').textContent = `${damage} dmg`;      
+            document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;      
         }
     }
 
-//         // Check if players are defeated (health reaches 0)
-//         if (player1Health <= 0 || player2Health <= 0) {
-//             alert('Game over! One of the players lost.');
+        // Check if players are defeated (health reaches 0)
+        if (player1Health <= 0 || player2Health <= 0) {
+            alert('Game over! One of the players lost.');
 //             // Add any other game-over logic here
 //         }
 //     }
@@ -126,10 +126,10 @@ var mainGameLoop = window.setInterval(function() {
 }, 1000)
 function updateGame() {
     gameData.dmgPerClick -= gameData.dmg
-    document.getElementById("dmgDone1").innerHTML = gameData.dmgPerClick + "dmg"
-    document.getElementById("dmgDone2").innerHTML = gameData.dmgPerClick + "dmg"
-    document.getElementById("health1").innerHTML = gameData.dmgPerClick + "hp"
-    document.getElementById("health2").innerHTML = gameData.dmgPerClick + "hp"
+    document.getElementById("dmgDone1").innerHTML = gameData.dmgPerClick + "dmg";
+    document.getElementById("dmgDone2").innerHTML = gameData.dmgPerClick + "dmg";
+    document.getElementById("health1").innerHTML = gameData.dmgPerClick + "hp";
+    document.getElementById("health2").innerHTML = gameData.dmgPerClick + "hp";
     
 }
 
