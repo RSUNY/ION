@@ -1,3 +1,4 @@
+// strings must be in speeach marks and .add or event `` listeners 
 const swapButton1 = document.getElementById('swapButton1');
 const healthSpan = document.getElementById('health1');
 const swapButton2 = document.getElementById('swapButton2');
@@ -94,7 +95,7 @@ rungame.forEach((element) => {
             document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;      
         }
     }
-    function updateGame(dmgDisplayId1) {
+    function updateGame(dmgDisplayId1) {dmgDone1.addEventListener('click', () => 
         // Swap damage: decrease health by a random amount (for demonstration purposes)
         const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
@@ -107,8 +108,51 @@ rungame.forEach((element) => {
             document.getElementById('health1').textContent = Deadpool health;
             document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;      
         }
-    }
+    ).innerHTML}
+    
+    function updateGame(dmgDisplayId2) {dmgDone2.addEventListener('click', () => 
+        // Swap damage: decrease health by a random amount (for demonstration purposes)
+        const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
+        if (dmgDisplayId2 === 'dmgDone2') {
+            Wolverinehealth -= damage;
+            document.getElementById('health2').textContent = Wolverine health;
+            document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;
+        } else {
+            Deadpoolhealth -= damage;
+            document.getElementById('health1').textContent = Deadpool health;
+            document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;      
+        }
+    ).innerHTML}
+
+    function updateGame(dmgDisplayId3) {healthSpan.addEventListener('click', () => 
+        // Swap damage: decrease health by a random amount (for demonstration purposes)
+        const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+
+        if (dmgDisplayId3 === 'health1') {
+            Wolverinehealth -= damage;
+            document.getElementById('health2').textContent = Wolverine health;
+            document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;
+        } else {
+            Deadpoolhealth -= damage;
+            document.getElementById('health1').textContent = Deadpool health;
+            document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;      
+        }
+    ).innerHTML}
+    function updateGame(dmgDisplayId4) {healthSpan2.addEventListener('click', () => 
+        // Swap damage: decrease health by a random amount (for demonstration purposes)
+        const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+
+        if (dmgDisplayId4 === 'health2') {
+            Wolverinehealth -= damage;
+            document.getElementById('health2').textContent = Wolverine health;
+            document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;
+        } else {
+            Deadpoolhealth -= damage;
+            document.getElementById('health1').textContent = Deadpool health;
+            document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;      
+        }
+    ).innerHTML}
         // Check if players are defeated (health reaches 0)
         if (Wolverinehealth <= 0 || Deadpoolhealth <= 0) {
             alert('Game over! One of the players lost.');
