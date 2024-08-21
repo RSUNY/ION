@@ -337,17 +337,22 @@ attack() {
     let Wolverinehealth = 1000;
     function attack() {
     let dp = Math.floor((Math.random()*20) + 1);
-    let Wolverinehealth1 = 1000 - dp;
+    let dp1 = Math.floor((Math.random()*20) + 1);
+    let Wolverinehealth = 1000 - dp;
+    console.log("Generated random number:", dp);
+    console.log("Generated random number:", dp);
+    
+    let Deadpoolhealth = 1000 - dp1;
     else if (dmgDisplayId === 'dmgDone1') {
-        Wolverinehealth -= damage;
+        Wolverinehealth -= $(`dmgDone1`);
         document.getElementById('health1').textContent = Wolverine health;
-        document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;
-    } else {
-        Deadpoolhealth -= damage;
+        document.getElementById('dmgDone1').textContent = `${Wolverinehealth.dmgDisplayId} dmg`;
+    } else if{ (dmgDisplayId1 === `dmgDone2`)
+        Deadpoolhealth -= $(`dmgDone2`);
         document.getElementById('health2').textContent = Deadpool health;
-        document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;      
+        document.getElementById('dmgDone2').textContent = `${Deadpoolhealth.dmgDisplayId1} dmg`;      
     }
-    return Wolverinehealth1
-    return Deadpoolhealth
+    return Wolverinehealth;
+    return Deadpoolhealth;
 }
 }
