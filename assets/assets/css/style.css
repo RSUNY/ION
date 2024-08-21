@@ -98,35 +98,41 @@ img {
     white-space: nowrap;
     padding: 10px;
     z-index: 0;
+    max-height: 25%;
+    height: 21vh;
+    border-width: 0cap;
 } 
 
-.left {
+.image2 {
     display: flexbox;
     flex-wrap: wrap-reverse;
-    margin-top: 0%;
+    margin-top: 60%;
     float: left;
     width: 25.33%;
     padding: 5px;
     left: 0;
     opacity: 50% transparency;
     background-position: right bottom;
-    background-repeat: no-repeat;
+    background-repeat: space;
     border-style: outset;
     border-radius: 100px;
+    width: 400px;
+    min-height: 300px;
+   
+
     
     background-position: 0%;
     position: relative;
     overflow: auto;
     white-space: nowrap;
-    padding: 12px;
-    height: 100vw;
+    padding: 10px;
 }
     
 
-.right {
+.image1 {
     display: flexbox;
     flex-wrap: wrap-reverse;
-    margin-top: 0%;
+    margin-top: 60%;
     float: left;
     width: 25.33%;
     padding: 5px;
@@ -136,6 +142,9 @@ img {
     background-repeat: no-repeat;
     border-style: outset;
     border-radius: 100px;
+    width: 400px;
+    min-height: 300px;
+   
     
     background-position: 0%;
     position: relative;
