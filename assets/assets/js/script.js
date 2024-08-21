@@ -377,8 +377,8 @@ function attack() {
     document.getElementById('health2').textContent = `Deadpool Health: ${Deadpoolhealth}`;
 
     // Update damage displays
-    document.getElementById('dmgDone1').textContent = `Wolverine dealt ${dp} dmg`;
-    document.getElementById('dmgDone2').textContent = `Deadpool dealt ${dp1} dmg`;
+    document.getElementById('dmgDone1').textContent = `Wolverine dealt ${dp1} dmg`;
+    document.getElementById('dmgDone2').textContent = `Deadpool dealt ${dp} dmg`;
     
     // Check for game over conditions
     if (Wolverinehealth <= 0) {
@@ -388,10 +388,9 @@ function attack() {
         alert("Deadpool is defeated!");
     }
 }
-document.getElementById("background1").addEventListener("click", rungame);
-document.getElementById('background2').addEventListener("click" , rungame).innerHTML= "77");
-document.getElementById("swapButton1").addEventListener("click", runHealth);
-document.getElementById("sawpButton2").addEventListener("click", runHealth2);
+// document.getElementById("background1").addEventListener("click", rungame);
+// document.getElementById('background2').addEventListener("click" , rungame).innerHTML= "77");
+// document.getElementById("swapButton1").addEventListener("click", runHealth);
 
 // // // Event listener for the button
 // swapButton1.addEventListener('click', () => 
@@ -477,13 +476,23 @@ document.getElementById("sawpButton2").addEventListener("click", runHealth2);
 // }
 // });
 
-let Deadpoolhealth = 1000;
-let Wolverinehealth = 1000;
+// let Deadpoolhealth = 1000;
+// let Wolverinehealth = 1000;
 
-const swapButton1 = document.getElementById('swapButton1');
-const swapButton2 = document.getElementById('swapButton2');
-const img = document.getElementById('image1');
-const img = document.getElementById('image2'); // Assuming there's an image element
+// const swapButton1 = document.getElementById('swapButton1');
+// const swapButton2 = document.getElementById('swapButton2');
+// // const img = document.getElementById('image1');
+// // const img = document.getElementById('image2'); // Assuming there's an image element
+
+
+img = document.getElementById('image1');
+img = document.getElementById('image2'); // Assuming there's an image element
+img.src = 'assets/assets/css/images/deadpool.jpg';
+img.src = 'assets/assets/css/images/wolverine.jpg';
+
+
+// Set an alternative text for the image (for accessibility)
+img.alt = 'A beautiful landscape';
 
 // Event listener for swapButton1
 swapButton1.addEventListener('click', () => {
@@ -492,10 +501,10 @@ swapButton1.addEventListener('click', () => {
 
 // Event listener for swapButton2
 swapButton2.addEventListener('click', () => {
-    runHealth1('Deadpool', 'image2'); // Pass character and image class
+    runHealth('Deadpool', 'image2'); // Pass character and image class
 });
 
-function runHealth2(character, imageClass) {
+function runHealth(character, imageClass) {
     const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
     if (character === 'Wolverine') {
@@ -516,4 +525,8 @@ function runHealth2(character, imageClass) {
 
     // Toggle image class based on the character
     img.classList.toggle(imageClass); // Toggle the appropriate image class
+
+
+    img.classList.toggle(image1);
+    img.classList.toggle(image2); // Toggle the appropriate image class
 }
