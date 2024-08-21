@@ -318,13 +318,13 @@
 // //     }
 // //     let rndInt = createGame(1 , 1000)
 // //     rndInt.forEach(constrndInt => {
-// //         updateGame().toggle = ? 1, 0
-// //         p.demo.createLeft = toggleEnlarge()
+// //         updateGame().toggle = ? 1, 0;
+// //         img.classList.createimage1 = toggleEnlarge());
     
 // //     else if rndInt= createGame)500  , 1000)
 // //     rndInt.forEach(constrndInt => {
-// //         updateGame().toggle = ? 1, 0
-// //         p.demo.createLeft = toggleShrink());
+// //         updateGame().toggle = ? 1, 0;
+// //         img.classList.createimage2 = toggleShrink());
 // //     return console.log(rndInt)
 // // }
 // // transform: scale(1.3);
@@ -388,3 +388,91 @@ function attack() {
         alert("Deadpool is defeated!");
     }
 }
+document.getElementById("background1").addEventListener("click", rungame);
+document.getElementById('background2').addEventListener("click" , rungame).innerHTML= "77");
+document.getElementById("swapButton1").addEventListener("click", runHealth);
+document.getElementById("sawpButton2").addEventListener("click", runHealth2);
+
+// // // Event listener for the button
+// swapButton1.addEventListener('click', () => 
+// //     // Swap damage: decrease health by a random amount (for demonstration purposes)
+
+// function runHealth2(`swapButton2`) {
+//         // Swap damage: decrease health by a random amount (for demonstration purposes)
+//         const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+//         Wolverinehealth -= damage;
+// function runHealth2(`swapButton1`) {
+//     } else const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+//         Deadpoolhealth -= damage;
+// }
+// )
+//     let rndInt = createGame(1 , 1000)
+//     rndInt.forEach(constrndInt => {
+//         updateGame().toggle = ? 1, 0;
+//         img.classList.createimage1 = toggleEnlarge()
+//     );
+    
+//     else if { rndInt= createGame)500  , 1000)
+//     rndInt.forEach(constrndInt => {
+//         updateGame().toggle = ? 1, 0;
+//         img.classList.createimage2 = toggleShrink());
+//     return console.log(rndInt)
+//     )}
+// }
+// transform: scale(1.3);
+// transform: scale(0.7);
+// }
+
+swapButton1.addEventListener('click', () => {
+    runHealth('Wolverine');
+    
+function runHealth(character) {
+    const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+
+    if (character === 'Wolverine') {
+        Wolverinehealth -= damage;
+        console.log(`Wolverine took ${damage} damage. Remaining health: ${Wolverinehealth}`);
+        
+        if (Wolverinehealth <= 0) {
+            alert("Wolverine is defeated!");
+        }
+
+        img.classList.toggle('image2'); // Assuming CSS class for enlarging image
+    } else if (character === 'Deadpool') {
+        Deadpoolhealth -= damage;
+        console.log(`Deadpool took ${damage} damage. Remaining health: ${Deadpoolhealth}`);
+        
+       return ===
+
+        img.classList.toggle('image2'); // Assuming CSS class for shrinking image
+    }
+}
+});
+
+// Event listener for swapButton2
+swapButton2.addEventListener('click', () => {
+    runHealth('Deadpool');
+
+
+function runHealth(character) {
+    const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+
+    if (character === 'Wolverine') {
+        Wolverinehealth -= damage;
+        console.log(`Wolverine took ${damage} damage. Remaining health: ${Wolverinehealth}`);
+        
+        if (Wolverinehealth <= 0) {
+            alert("Wolverine is defeated!");
+        }
+
+        img.classList.toggle('image1'); // Assuming CSS class for enlarging image
+    } else if (character === 'Deadpool') {
+        Deadpoolhealth -= damage;
+        console.log(`Deadpool took ${damage} damage. Remaining health: ${Deadpoolhealth}`);
+        
+       return ===
+
+        img.classList.toggle('image1'); // Assuming CSS class for shrinking image
+    }
+}
+});
