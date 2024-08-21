@@ -106,7 +106,7 @@ img {
 .image2 {
     display: flexbox;
     flex-wrap: wrap-reverse;
-    margin-top: 60%;
+    margin-top: 25%;
     float: left;
     width: 25.33%;
     padding: 5px;
@@ -132,13 +132,13 @@ img {
 .image1 {
     display: flexbox;
     flex-wrap: wrap-reverse;
-    margin-top: 60%;
+    margin-top: 0%;
     float: left;
     width: 25.33%;
     padding: 5px;
     left: 0;
     opacity: 50% transparency;
-    background-position: right bottom;
+    background-position: top bottom;
     background-repeat: no-repeat;
     border-style: outset;
     border-radius: 100px;
