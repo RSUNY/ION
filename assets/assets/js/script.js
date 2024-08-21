@@ -331,8 +331,8 @@
 // // transform: scale(0.7);
 // // }
 
-document.getElementById("dmgDone1").addEventListener("click" , attack);
-document.getElementById("dmgDone2").addEventListener("click" , attack);
+document.getElementById("background1").addEventListener("click" , attack);
+document.getElementById("background2").addEventListener("click" , attack);
 document.getElementById("health1").addEventListener("click" , attack);
 document.getElementById("health2").addEventListener("click" , attack);
 // attack() {
