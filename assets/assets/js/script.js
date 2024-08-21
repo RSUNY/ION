@@ -331,7 +331,10 @@
 // // transform: scale(0.7);
 // // }
 
-document.getElementById("dmgDone").addEventListener("click" , attack)
+document.getElementById("dmgDone1").addEventListener("click" , attack);
+document.getElementById("dmgDone2").addEventListener("click" , attack);
+document.getElementById("dmgDone1").addEventListener("click" , attack);
+document.getElementById("dmgDone1").addEventListener("click" , attack);
 attack() {
     let Deadpoolhealth = 1000;
     let Wolverinehealth = 1000;
