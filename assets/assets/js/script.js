@@ -1,23 +1,29 @@
-document.getElementById("background1").addEventListener("click", rungame);
-document.getElementById('background2').addEventListener("click" , rungame).innerHTML= "77");
-document.getElementById("swapButton1").addEventListener("click", runHealth);
-document.getElementById("sawpButton2").addEventListener("click", runHealth2);
-
-
-elselement.classlist.add()
-// const wolverine = document.getElementsByClassName(demo)
-// const typeMessage = document.getElementsByClassName(right)
-// const nextMessage = document.getElementsByClassName(left)
-// const clickedMessage = document.getElementById(background1)
-// const nextClickedMessage = document.getElementById(backgound2)
 const swapButton1 = document.getElementById('swapButton1');
 const healthSpan = document.getElementById('health1');
 const swapButton2 = document.getElementById('swapButton2');
 const healthSpan2 = document.getElementById('health2');
 const dmgDone1 = document.getElementById(`dmgDone1`)
 const dmgDone2 = document.getElementById(`dmgDone2`)
-// const rungame[""]
+document.getElementById("background1").addEventListener("click", rungame);
+document.getElementById('background2').addEventListener("click" , rungame).innerHTML= "77");
+document.getElementById("swapButton1").addEventListener("click", runHealth);
+document.getElementById("sawpButton2").addEventListener("click", runHealth2);
 
+
+// elselement.classlist.add()
+// const wolverine = document.getElementsByClassName(demo)
+// const typeMessage = document.getElementsByClassName(right)
+// const nextMessage = document.getElementsByClassName(left)
+// const clickedMessage = document.getElementById(background1)
+// const nextClickedMessage = document.getElementById(backgound2)
+// const swapButton1 = document.getElementById('swapButton1');
+// const healthSpan = document.getElementById('health1');
+// const swapButton2 = document.getElementById('swapButton2');
+// const healthSpan2 = document.getElementById('health2');
+// const dmgDone1 = document.getElementById(`dmgDone1`)
+// const dmgDone2 = document.getElementById(`dmgDone2`)
+// // const rungame[""]
+// now function is addedd copy and paste ans highlight code to see values
 function rungame() { 
 const rungame = ["1" , "2" , "3" , "4" , "5"];
 
@@ -64,7 +70,7 @@ rungame.forEach((element) => {
     }
   
 });
-} 
+ }
 // add parentheses to run function now not immediately then added function after const rungame
     console.log("The updateGame function has been called!");
     console.log(updateGame())
@@ -88,12 +94,26 @@ rungame.forEach((element) => {
             document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;      
         }
     }
+    function updateGame(dmgDisplayId1) {
+        // Swap damage: decrease health by a random amount (for demonstration purposes)
+        const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+
+        if (dmgDisplayId1 === 'dmgDone1') {
+            Wolverinehealth -= damage;
+            document.getElementById('health2').textContent = Wolverine health;
+            document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;
+        } else {
+            Deadpoolhealth -= damage;
+            document.getElementById('health1').textContent = Deadpool health;
+            document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;      
+        }
+    }
 
         // Check if players are defeated (health reaches 0)
         if (Wolverinehealth <= 0 || Deadpoolhealth <= 0) {
             alert('Game over! One of the players lost.');
 //             // Add any other game-over logic here
-//         }
+        }
 //     }
 //     let rndInt = createGame(1 , 1000)
 //     rndInt.forEach(constrndInt => {
@@ -196,13 +216,13 @@ function runHealth(swapButton1) {
 swapButton1.addEventListener('click', () => {
     // Swap damage: decrease health by a random amount (for demonstration purposes)
     const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
-    Deadpool health -= damage;
+    Deadpoolhealth -= damage;
 
     // Update the health display
     healthSpan.textContent = Deadpool health;
 
     // Check if player is defeated (health reaches 0)
-    if (Deadpool health <= 0) {
+    if (Deadpoolhealth <= 0) {
         alert('Game over! You lost.');
         // Add any other game-over logic here
     }
@@ -213,13 +233,13 @@ function runHealth2(swapButton2) {
 swapButton2.addEventListener('click', () => {
     // Swap damage: decrease health by a random amount (for demonstration purposes)
     const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
-    Wolverine health -= damage;
+    Wolverinehealth -= damage;
 
     // Update the health display
     healthSpan.textContent = Wolverine health;
 
     // Check if player is defeated (health reaches 0)
-    if (Wolverine health <= 0) {
+    if (Wolverinehealth <= 0) {
         alert('Game over! You lost.');
         // Add any other game-over logic here
     }
