@@ -423,38 +423,79 @@ document.getElementById("sawpButton2").addEventListener("click", runHealth2);
 // transform: scale(0.7);
 // }
 
-swapButton1.addEventListener('click', () => {
-    runHealth('Wolverine');
+// swapButton1.addEventListener('click', () => {
+//     runHealth('Wolverine');
     
-function runHealth(character) {
-    const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+// function runHealth(character) {
+//     const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
-    if (character === 'Wolverine') {
-        Wolverinehealth -= damage;
-        console.log(`Wolverine took ${damage} damage. Remaining health: ${Wolverinehealth}`);
+//     if (character === 'Wolverine') {
+//         Wolverinehealth -= damage;
+//         console.log(`Wolverine took ${damage} damage. Remaining health: ${Wolverinehealth}`);
         
-        if (Wolverinehealth <= 0) {
-            alert("Wolverine is defeated!");
-        }
+//         if (Wolverinehealth <= 0) {
+//             alert("Wolverine is defeated!");
+//         }
 
-        img.classList.toggle('image2'); // Assuming CSS class for enlarging image
-    } else if (character === 'Deadpool') {
-        Deadpoolhealth -= damage;
-        console.log(`Deadpool took ${damage} damage. Remaining health: ${Deadpoolhealth}`);
+//         img.classList.toggle('image2'); // Assuming CSS class for enlarging image
+//     } else if (character === 'Deadpool') {
+//         Deadpoolhealth -= damage;
+//         console.log(`Deadpool took ${damage} damage. Remaining health: ${Deadpoolhealth}`);
         
-       return ===
+//        return ===
 
-        img.classList.toggle('image2'); // Assuming CSS class for shrinking image
-    }
-}
+//         img.classList.toggle('image2'); // Assuming CSS class for shrinking image
+//     }
+// }
+// });
+
+// // Event listener for swapButton2
+// swapButton2.addEventListener('click', () => {
+//     runHealth('Deadpool');
+
+
+// function runHealth(character) {
+//     const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
+
+//     if (character === 'Wolverine') {
+//         Wolverinehealth -= damage;
+//         console.log(`Wolverine took ${damage} damage. Remaining health: ${Wolverinehealth}`);
+        
+//         if (Wolverinehealth <= 0) {
+//             alert("Wolverine is defeated!");
+//         }
+
+//         img.classList.toggle('image1'); // Assuming CSS class for enlarging image
+//     } else if (character === 'Deadpool') {
+//         Deadpoolhealth -= damage;
+//         console.log(`Deadpool took ${damage} damage. Remaining health: ${Deadpoolhealth}`);
+        
+//        return ===
+
+//         img.classList.toggle('image1'); // Assuming CSS class for shrinking image
+//     }
+// }
+// });
+
+let Deadpoolhealth = 1000;
+let Wolverinehealth = 1000;
+
+const swapButton1 = document.getElementById('swapButton1');
+const swapButton2 = document.getElementById('swapButton2');
+const img = document.getElementById('image1');
+const img = document.getElementById('image2'); // Assuming there's an image element
+
+// Event listener for swapButton1
+swapButton1.addEventListener('click', () => {
+    runHealth('Wolverine', 'image1'); // Pass character and image class
 });
 
 // Event listener for swapButton2
 swapButton2.addEventListener('click', () => {
-    runHealth('Deadpool');
+    runHealth1('Deadpool', 'image2'); // Pass character and image class
+});
 
-
-function runHealth(character) {
+function runHealth2(character, imageClass) {
     const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
     if (character === 'Wolverine') {
@@ -464,15 +505,15 @@ function runHealth(character) {
         if (Wolverinehealth <= 0) {
             alert("Wolverine is defeated!");
         }
-
-        img.classList.toggle('image1'); // Assuming CSS class for enlarging image
     } else if (character === 'Deadpool') {
         Deadpoolhealth -= damage;
         console.log(`Deadpool took ${damage} damage. Remaining health: ${Deadpoolhealth}`);
         
-       return ===
-
-        img.classList.toggle('image1'); // Assuming CSS class for shrinking image
+        if (Deadpoolhealth <= 0) {
+            alert("Deadpool is defeated!");
+        }
     }
+
+    // Toggle image class based on the character
+    img.classList.toggle(imageClass); // Toggle the appropriate image class
 }
-});
