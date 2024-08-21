@@ -1,7 +1,7 @@
-document.getElementById("background1").addEventListener("click", rungame());
-document.getElementById('background2').addEventListener("click" , rungame().innerHTML= "77");innerHTML= "77";
-document.getElementById("swapButton1").addEventListener("click", runHealth());
-document.getElementById("sawpButton2").addEventListener("click", runHealth2());
+document.getElementById("background1").addEventListener("click", rungame);
+document.getElementById('background2').addEventListener("click" , rungame).innerHTML= "77");
+document.getElementById("swapButton1").addEventListener("click", runHealth);
+document.getElementById("sawpButton2").addEventListener("click", runHealth2);
 
 
 elselement.classlist.add()
@@ -18,7 +18,7 @@ const dmgDone1 = document.getElementById(`dmgDone1`)
 const dmgDone2 = document.getElementById(`dmgDone2`)
 // const rungame[""]
 
-
+function rungame() { 
 const rungame = ["1" , "2" , "3" , "4" , "5"];
 
     // Define an object to map indices to actions
@@ -64,32 +64,33 @@ rungame.forEach((element) => {
     }
   
 });
-
+} 
+// add parentheses to run function now not immediately then added function after const rungame
     console.log("The updateGame function has been called!");
     console.log(updateGame())
     // Your game update logic goes here
 // function readScore() {
     
-    let Wolverine health = 1000;
-    let Deadpool health = 1000;
+    let Wolverinehealth = 1000;
+    let Deadpoolhealth = 1000;
 
     function updateGame(dmgDisplayId) {
         // Swap damage: decrease health by a random amount (for demonstration purposes)
         const damage = Math.floor(Math.random() * 20) + 1; // Random damage between 1 and 20
 
         if (dmgDisplayId === 'dmgDone1') {
-            Wolverine health -= damage;
+            Wolverinehealth -= damage;
             document.getElementById('health1').textContent = Wolverine health;
             document.getElementById('dmgDone1').textContent = `${gameData.dmgPerClick} dmg`;
         } else {
-            Deadpool health -= damage;
+            Deadpoolhealth -= damage;
             document.getElementById('health2').textContent = Deadpool health;
             document.getElementById('dmgDone2').textContent = `${gameData.dmgPerClick} dmg`;      
         }
     }
 
         // Check if players are defeated (health reaches 0)
-        if (player1Health <= 0 || player2Health <= 0) {
+        if (Wolverinehealth <= 0 || Deadpoolhealth <= 0) {
             alert('Game over! One of the players lost.');
 //             // Add any other game-over logic here
 //         }
