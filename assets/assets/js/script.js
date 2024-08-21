@@ -333,29 +333,58 @@
 
 document.getElementById("dmgDone1").addEventListener("click" , attack);
 document.getElementById("dmgDone2").addEventListener("click" , attack);
-document.getElementById("dmgDone1").addEventListener("click" , attack);
-document.getElementById("dmgDone1").addEventListener("click" , attack);
-attack() {
-    let Deadpoolhealth = 1000;
-    let Wolverinehealth = 1000;
-    function attack() {
-    let dp = Math.floor((Math.random()*20) + 1);
-    let dp1 = Math.floor((Math.random()*20) + 1);
-    let Wolverinehealth = 1000 - dp;
-    console.log("Generated random number:", dp);
-    console.log("Generated random number:", dp);
+document.getElementById("health1").addEventListener("click" , attack);
+document.getElementById("health2").addEventListener("click" , attack);
+// attack() {
+//     let Deadpoolhealth = 1000;
+//     let Wolverinehealth = 1000;
+//     function attack() {
+//     let dp = Math.floor((Math.random()*20) + 1);
+//     let dp1 = Math.floor((Math.random()*20) + 1);
+//     let Wolverinehealth = 1000 - dp;
+//     console.log("Generated random number:", dp);
+//     console.log("Generated random number:", dp1);
     
-    let Deadpoolhealth = 1000 - dp1;
-    else if (dmgDisplayId === 'dmgDone1') {
-        Wolverinehealth -= $(`dmgDone1`);
-        document.getElementById('health1').textContent = Wolverine health;
-        document.getElementById('dmgDone1').textContent = `${Wolverinehealth.dmgDisplayId} dmg`;
-    } else if{ (dmgDisplayId1 === `dmgDone2`)
-        Deadpoolhealth -= $(`dmgDone2`);
-        document.getElementById('health2').textContent = Deadpool health;
-        document.getElementById('dmgDone2').textContent = `${Deadpoolhealth.dmgDisplayId1} dmg`;      
+//     let Deadpoolhealth = 1000 - dp1;
+//     else if (dmgDisplayId === 'dmgDone1') {
+//         Wolverinehealth -= $(`dmgDone1`);
+//         document.getElementById('health1').textContent = Wolverine health;
+//         document.getElementById('dmgDone1').textContent = `${Wolverinehealth.dmgDisplayId} dmg`;
+//     } else if{ (dmgDisplayId1 === `dmgDone2`)
+//         Deadpoolhealth -= $(`dmgDone2`);
+//         document.getElementById('health2').textContent = Deadpool health;
+//         document.getElementById('dmgDone2').textContent = `${Deadpoolhealth.dmgDisplayId1} dmg`;      
+//     }
+//     return Wolverinehealth;
+//     return Deadpoolhealth;
+// }
+// }
+let Deadpoolhealth = 1000;
+let Wolverinehealth = 1000;
+
+document.getElementById("dmgDone").addEventListener("click", attack);
+
+function attack() {
+    let dp = Math.floor((Math.random() * 20) + 1);
+    let dp1 = Math.floor((Math.random() * 20) + 1);
+    
+    // Subtract damage from health
+    Wolverinehealth -= dp;
+    Deadpoolhealth -= dp1;
+
+    // Update health displays
+    document.getElementById('health1').textContent = `Wolverine Health: ${Wolverinehealth}`;
+    document.getElementById('health2').textContent = `Deadpool Health: ${Deadpoolhealth}`;
+
+    // Update damage displays
+    document.getElementById('dmgDone1').textContent = `Wolverine dealt ${dp} dmg`;
+    document.getElementById('dmgDone2').textContent = `Deadpool dealt ${dp1} dmg`;
+    
+    // Check for game over conditions
+    if (Wolverinehealth <= 0) {
+        alert("Wolverine is defeated!");
     }
-    return Wolverinehealth;
-    return Deadpoolhealth;
-}
+    if (Deadpoolhealth <= 0) {
+        alert("Deadpool is defeated!");
+    }
 }
