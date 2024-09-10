@@ -27,3 +27,13 @@ SELECT ANYTHING + * FROM "Track"; + WHERE "composer * FROM "KEY FIELD"; = 'Queen
 /copt to JSON ext file
 \copy (SELECT ANYTHING + * FROM "Track"; + WHERE "composer * FROM "KEY FIELD"; = 'Queen(
 T0 'text.csv'
+
+pip3 install sqlalchemy==1.4.46
+/home/gitpod/.pyenv/versions/3.12.2/bin/python
+Python 3.12.2 (main, Aug 16 2024, 11:45:52) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from sqlalchemy import(
+...     create_engine, Table, Column, Float, ForeignKey, Integer, String, MetaData
+... )
+>>> 
+>>> 
