@@ -1,0 +1,29 @@
+            List of relations
+ Schema |     Name      | Type  | Owner  
+--------+---------------+-------+--------
+ public | Album         | table | gitpod
+ public | Artist        | table | gitpod
+ public | Customer      | table | gitpod
+ public | Employee      | table | gitpod
+ public | Genre         | table | gitpod
+ public | Invoice       | table | gitpod
+ public | InvoiceLine   | table | gitpod
+ public | MediaType     | table | gitpod
+ public | Playlist      | table | gitpod
+ public | PlaylistTrack | table | gitpod
+ public | Track         | table | gitpod
+(11 rows)
+
+SELECT ANYTHING + * FROM "Artist";
+2 COLUMNS PRIMARY KEY NAME VALUE(STRING)
+hit Q enter - to exit query search 
+double quotes ending colon
+SELECT NAME + * FROM "Artist";
+SELECT ANYTHING + * FROM "Artist" WHERE "Name" = 'Queen
+THIS IS A FOREIGN KEY
+SELECT ANYTHING + * FROM "Album"; + WHERE "ArtistID * FROM "KEY FIELD"; = 51;
+Column header for compuser to search for all tracks for queen
+SELECT ANYTHING + * FROM "Track"; + WHERE "composer * FROM "KEY FIELD"; = 'Queen;
+/copt to JSON ext file
+\copy (SELECT ANYTHING + * FROM "Track"; + WHERE "composer * FROM "KEY FIELD"; = 'Queen(
+T0 'text.csv'
